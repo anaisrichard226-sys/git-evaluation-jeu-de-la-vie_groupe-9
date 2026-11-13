@@ -17,7 +17,19 @@ def compter_voisins_vivants(grille, ligne, colonne):
     return compteur
 
 
-
+def generation_suivante(grille):
+    n = len(grille)
+    nouvelle_grille = [[0 for _ in range(n)] for _ in range(n)]
+    for i in range(0, n):
+        for j in range(0, n):
+            nb_voisins = compter_voisins_vivants(grille, i, j)
+            if grille[i][j] == 1:
+                if nb_voisins == 2 or nb_voisins == 3:
+                    nouvelle_grille[i][j] = 1
+            else:
+                if nb_voisins == 3:
+                    nouvelle_grille[i][j] = 1
+    return nouvelle_grille
 
 
 def main():
