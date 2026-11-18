@@ -2,6 +2,43 @@ import random
 
 from lib import write_grid
 
+#----------- Tâche A : calcul des générations ----------------
+
+def compter_voisins_vivants(grille, ligne, colonne, periodique=False):
+    pass
+
+
+
+def generation_suivante(grille, periodique=False):
+    pass
+
+
+#----------- Tâche B : arguments de la ligne de commande ------
+
+
+def lire_arguments():
+    pass
+
+#------------ Tâche C : entrées et sorties ---------------------
+
+def creer_grille_aleatoire(nb_cells, seed):
+    pass
+
+
+def lire_grille_stdin():
+    pass
+
+
+def ecrire_images(grille, numero, dossier):
+    pass
+
+
+def afficher_texte(grille, numero):
+    pass
+
+
+
+
 def main():
     nb_cells = 50
 
