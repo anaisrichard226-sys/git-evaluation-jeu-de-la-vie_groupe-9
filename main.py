@@ -1,5 +1,7 @@
 import random
 import sys
+import argparse
+
 
 from lib import write_grid
 
@@ -18,7 +20,23 @@ def generation_suivante(grille, periodique=False):
 
 
 def lire_arguments():
-    pass
+    parser = argparse.ArgumentParser(description="Jeu de la vie de Conway")
+    parser.add_argument("-n", "--nb_cells", type=int, default=10, help="nombre de cellules par côté (défaut : 10)")
+    parser.add_argument("-m", "--max_iterations", type=int, default=20, help="numéro de la dernière itération (défaut : 20)")
+    parser.add_argument("-s", "--seed", type=int, default=42, help="graine du générateur aléatoire (défaut : 42)")
+    parser.add_argument("-o", "--output_directory", default="outputs", help="dossier des images (défaut : outputs)")
+    parser.add_argument("-t", "--output_type", choices=["image", "text"], default="image", help="type de sortie : image ou text (défaut : image)")
+    parser.add_argument("-p", "--periodic", action="store_true", help="active les conditions aux limites périodiques")
+    args = parser.parse_args()
+
+    if args.nb_cells <= 0:
+        parser.error("--nb_cells doit être un entier strictement positif")
+    if args.max_iterations < 0:
+        parser.error("--max_iterations doit être un entier positif ou nul")
+
+    return args
+
+
 
 #------------ Tâche C : entrées et sorties ---------------------
 
