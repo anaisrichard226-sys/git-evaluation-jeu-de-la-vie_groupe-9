@@ -1,10 +1,10 @@
 import random
+import os
 import sys
 import argparse
 
 
 from lib import write_grid
-
 #----------- Tâche A : calcul des générations ----------------
 
 def compter_voisins_vivants(grille, ligne, colonne, periodique=False):
@@ -97,7 +97,9 @@ def lire_grille_stdin():
 
 
 def ecrire_images(grille, numero, dossier):
-    pass
+    os.makedirs(dossier, exist_ok=True)
+    filename = os.path.join(dossier, f"grid_{numero:04d}.png")
+    write_grid(matrix=grille, filename=filename)
 
 
 def afficher_texte(grille, numero):
