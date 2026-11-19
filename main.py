@@ -8,7 +8,19 @@ from lib import write_grid
 #----------- Tâche A : calcul des générations ----------------
 
 def compter_voisins_vivants(grille, ligne, colonne, periodique=False):
-    pass
+    n = len(grille)
+    compteur = 0
+
+    for i in range(-1, 2):
+        for j in range(-1, 2):
+            if i != 0 or j != 0:
+                voisins_ligne = ligne + i
+                voisins_colonne = colonne + j
+                if (voisins_ligne >= 0 and voisins_ligne < n) and (voisins_colonne >= 0 and voisins_colonne < n):
+                    if grille[voisins_ligne][voisins_colonne] == 1:
+                        compteur += 1
+    
+    return compteur
 
 
 
