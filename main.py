@@ -22,8 +22,12 @@ def lire_arguments():
 #------------ Tâche C : entrées et sorties ---------------------
 
 def creer_grille_aleatoire(nb_cells, seed):
-    pass
-
+    """Crée une grille carrée aléatoire, reproductible grâce à la graine."""
+    rng = random.Random(seed)
+    return [
+        [rng.choice([0, 1]) for _ in range(nb_cells)]
+        for _ in range(nb_cells)
+    ]
 
 def lire_grille_stdin():
     pass
