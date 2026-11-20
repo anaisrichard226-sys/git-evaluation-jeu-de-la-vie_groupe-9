@@ -103,7 +103,10 @@ def ecrire_images(grille, numero, dossier):
 
 
 def afficher_texte(grille, numero):
-    pass
+    print(f"iteration: {numero}")
+    for ligne in grille:
+        print(' '.join([str(cell) for cell in ligne]))
+
 
 
 
