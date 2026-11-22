@@ -122,22 +122,28 @@ def afficher_texte(grille, numero):
         print(' '.join([str(cell) for cell in ligne]))
 
 
-
-
-
 def main():
-    nb_cells = 50
+    args = lire_arguments()
 
-    rng = random.Random(4200)
+    if not sys.stdin.isatty():
+        grille = lire_grille_stdin()
+    else:
+        grille = creer_grille_aleatoire(args.nb_cells, args.seed)
 
-    matrix = [
-        [rng.choice([0, 1]) for _ in range(nb_cells)]
-        for _ in range(nb_cells)
-    ]
+    images = args.output_type == "image"
+    if images:
+        ecrire_images(grille, 0, args.output_directory)
 
-    iter = 0
-    filename = f"outputs/grid_{iter:04d}.png"
-    write_grid(matrix=matrix, filename=filename)
+    for numero in range(1, args.max_iterations + 1):
+        grille = generation_suivante(grille, args.periodic)
+        if images:
+            ecrire_images(grille, numero, args.output_directory)
+
+    if images:
+        print(f"Generation of {args.max_iterations + 1} images in directory {args.output_directory}")
+    else:
+        afficher_texte(grille, args.max_iterations)
+
 
 if __name__ == "__main__":
     main()
