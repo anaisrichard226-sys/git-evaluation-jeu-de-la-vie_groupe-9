@@ -111,7 +111,10 @@ def lire_grille_stdin():
 
 
 def ecrire_images(grille, numero, dossier):
-    os.makedirs(dossier, exist_ok=True)
+    try:
+        os.makedirs(dossier, exist_ok=True)
+    except OSError as e:
+        erreur(f"impossible de créer le dossier '{dossier}' : {e.strerror}")
     filename = os.path.join(dossier, f"grid_{numero:04d}.png")
     write_grid(matrix=grille, filename=filename)
 
