@@ -46,7 +46,7 @@ Même grille avec conditions périodiques :
 ## Vidéos
 
 - Simulation (graine ..., commandes ...) : <lien YouTube>
-- Gource : <lien YouTube>
+- Gource : [Voir la vidéo](https://youtu.be/5GGUWvP4fHc)
 
 ## Intégration continue
 
