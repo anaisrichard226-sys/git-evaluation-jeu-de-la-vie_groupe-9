@@ -51,7 +51,7 @@ Même grille avec conditions périodiques :
 
 ## Intégration continue
 
-Exécution réussie : <lien de l'onglet Actions>
+Exécution réussie : [Voir l'exécution GitHub Actions](https://github.com/anaisrichard226-sys/git-evaluation-jeu-de-la-vie_groupe-9/actions/runs/45171377278)
 
 ## Auteurs
 
