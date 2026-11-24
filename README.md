@@ -45,12 +45,13 @@ Même grille avec conditions périodiques :
 
 ## Vidéos
 
-- Simulation (graine ..., commandes ...) : <lien YouTube>
-- Gource : <lien YouTube>
+- Simulation (grille de 50 × 50, graine 4200, 2000 itérations, 2001 images, 20 images/seconde) : [Voir la vidéo](https://youtube.com/shorts/UitM97gbHZk)
+
+- Gource : nouveau lien à ajouter après la dernière PR.
 
 ## Intégration continue
 
-Exécution réussie : <lien de l'onglet Actions>
+Exécution réussie : [Voir l'exécution GitHub Actions](https://github.com/anaisrichard226-sys/git-evaluation-jeu-de-la-vie_groupe-9/actions/runs/45171377278)
 
 ## Auteurs
 
