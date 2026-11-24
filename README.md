@@ -47,7 +47,7 @@ Même grille avec conditions périodiques :
 
 - Simulation (grille de 50 × 50, graine 4200, 2000 itérations, 2001 images, 20 images/seconde) : [Voir la vidéo](https://youtube.com/shorts/UitM97gbHZk)
 
-- Gource : nouveau lien à ajouter après la dernière PR.
+- Gource : https://youtu.be/VFxT_rbpSKo
 
 ## Intégration continue
 
